@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Online Dc Solution</title>
+    <!-- CDN de boostrap 5 real  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="assets/img/quienes-somos.jpg" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    ::placeholder {
+        font-weight: bold;
+        color: black;
+    }
+</style>
+
+<body style="background-color: #f6f7fb">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light ">
+        <div class="container">
+            <img src="assets/img/LogoOnlineNegro.png" alt="" width="100px" height="100px" class="navbar-brand">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" style="color: black;" aria-current="page"
+                            href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2"  style="color: black;" href="productos.html">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2"  style="color: black;" href="quienes-somos.html">QUIENES SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2"  style="color: #0d8ce0;" href="contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container-fluid container contacto">
+        <div class="row">
+        <strong id="contactanos" class="text-lg text-sm text-md">Contactanos</strong>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 col-lg-6">
+                <strong style="font-size: 20px; font-weight: 600; color: black;">Soporte y ayuda</strong> <br>
+                <strong style="font-size: 40px; font-weight: 800; color: black; font-family: sans-serif;">(255)
+                    352-6258</strong> <br>
+                <strong style="font-size: 20px; font-weight: 800; color: black; font-family: sans-serif;">Email</strong>
+                <p class="text">info@onlinedcsolution.com</p> <br>
+                <strong style="font-size: 20px; font-weight: 800; color: black; font-family: sans-serif;">Shop</strong>
+                <p>
+                    Av. Quito y Abraham calazacon. <br>
+                    Como referencia frente a farmacias cruz azul, local esquinero
+                </p>
+            </div> <!-- /cierro col-6-->
+   
+        
+            <div class="col-lg-6 col-12">
+                <div class="row container">
+                    <div class="col-12">
+                        <div class="contenedor-formulario">
+                            <form action="procesar_correo.php" method="post" id="formulario-correo">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="Nombre" name="Nombre"
+                                        placeholder="NOMBRE">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="Correo" name="Correo"
+                                        placeholder="CORREO ELECTRONICO">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea  class="form-control" id="Mensaje" name="Mensaje" rows="5" 
+                                        placeholder="MENSAJE"></textarea>
+                                </div>
+                                <div class="mb-3 text-end">
+                                    <button type="submit" class="btn-square">
+                                        <strong>Enviar</strong>  <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                    
+                                </div>
+
+                            </form>
+                        </div>
+                        <div id="mensaje-enviado"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /cierro row-->
+
+
+
+    </section>
+    <div class="row m-1 mt-5">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d700.7880018187051!2d-79.16281198108786!3d-0.25051564657422126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d547004103c9dd%3A0x2080f19d5141707d!2sOnline%20Dc%20Solution!5e0!3m2!1ses-419!2sec!4v1704142583072!5m2!1ses-419!2sec"
+            width="1800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+    <section class="bg-dark text-light">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <!-- Content -->
+                    <h4 class="mt-5">INFORMACION DE CONTACTO</h4>
+                    <P>Santo Domingo. <br>
+                        (+593)123456789 <br>
+                        Av. Quito y Abram Calazacón. <br>
+                        Redondel del circulo de los continentes como referencia frente a Farmacia Cruz Azul.</P>
+                </div>
+                <!-- Grid column -->
+
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <!-- Content -->
+                    <h4 class="mt-5">ENLACES</h4>
+                    <style>
+                        a {
+                            color: white;
+                            /* Color normal */
+                            text-decoration: underline;
+                            /* Quitamos el subrayado por defecto */
+                        }
+
+                        a:hover {
+                            text-decoration: underline;
+                            /* Agregamos un subrayado al pasar el cursor por encima */
+                            color: white;
+                            /* Cambiamos el color del texto cuando se pasa el cursor */
+                        }
+                    </style>
+                    <a href="terminos-y-condiciones.html">Términos y Condiciones</a> <br>
+
+                    <a href="politica-de-privacidad.html">Política de Privacidad</a>
+
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <!-- Content -->
+                    <h4 class="mt-5"> REDES SOCIALES</h4>
+                    <!--icono de facebook con bs5 icon -->
+                    <a href="" class="btn btn-outline-light btn-floating m-1" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <!-- icono de tiktpok-->
+                    <a href="" class="btn btn-outline-light btn-floating m-1" role="button"><i
+                            class="fab fa-tiktok"></i></a>
+                    <!-- icono de whatsapp-->
+                    <a href="" class="btn btn-outline-light btn-floating m-1" role="button"><i
+                            class="fab fa-whatsapp"></i></a>
+
+
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+
+    <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/correo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
