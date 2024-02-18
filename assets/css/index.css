@@ -1,0 +1,132 @@
+.servicios {
+    min-height: 250px;
+    /* Establece una altura mínima para los contenedores de servicios */
+}
+
+.servicios img {
+    vertical-align: middle;
+    /* Alinea verticalmente la imagen */
+}
+
+.btn2 {
+    background-color: transparent;
+    border: 2px solid #751fff;
+    /* Morado */
+    color: #751fff;
+    /* Morado */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    /* Hace que el botón sea cuadrado */
+}
+
+.btn2:hover {
+    background-color: transparent;
+    /* Morado */
+    border: 2px solid #751fff;
+    /* Morado */
+    color: #751fff;
+    /* Blanco */
+    font-weight: 500;
+}
+
+
+.btn1 {
+    background-color: transparent;
+    border: 2px solid #FFFFFF !important;
+    /* Morado */
+    color: #FFFFFF;
+    /* Morado */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    /* Hace que el botón sea cuadrado */
+}
+
+.btn1:hover {
+    background-color: transparent;
+    /* Morado */
+    border: 2px solid #FFFFFF;
+    /* Morado */
+    color: #FFFFFF;
+    /* Blanco */
+    font-weight: 500;
+}
+
+
+/* Estilo personalizado para el ícono */
+.btn2-square i {
+    display: none;
+    /* Ocultar el ícono por defecto */
+    color: #751fff;
+    ;
+}
+
+/* Estilo para mostrar el ícono al pasar el mouse (hover) */
+.btn2-square:hover i {
+    display: inline-block;
+    /* Mostrar el ícono al pasar el mouse */
+    color: #751fff;
+    ;
+}
+
+
+/* Estilo personalizado para el ícono */
+.btn1-square i {
+    display: none;
+    /* Ocultar el ícono por defecto */
+    color:
+        white;
+}
+
+/* Estilo para mostrar el ícono al pasar el mouse (hover) */
+.btn1-square:hover i {
+    display: inline-block;
+    /* Mostrar el ícono al pasar el mouse */
+    color: white;
+}
+
+
+
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-square3 {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #666;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+
+/* Estilo personalizado para el ícono */
+.btn-square3 i {
+    display: none;
+    /* Ocultar el ícono por defecto */
+    color:
+        white;
+}
+
+/* Estilo para mostrar el ícono al pasar el mouse (hover) */
+.btn-square3:hover i {
+    display: inline-block;
+    /* Mostrar el ícono al pasar el mouse */
+    color: white;
+}

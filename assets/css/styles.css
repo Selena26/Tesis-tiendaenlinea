@@ -1,0 +1,137 @@
+.rounded-img {
+  border-radius: 50%;
+
+}
+
+/**CARRUSEL*************************************************/
+.carousel-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-text p {
+  margin-bottom: 0;
+}
+
+/* Cambiar el color de las flechas del carrusel a negro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  /* Invertir el color de las flechas */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+  /* Oculta los botones por defecto */
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  display: block;
+  /* Muestra los botones al pasar el mouse sobre el carrusel */
+}
+/*header*/
+#header {
+  background-image: url('https://onlinedcsolution.com/wp-content/uploads/2023/12/Diseno-de-Inicio_bj.png');
+  /* Ruta relativa a la imagen local */
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  /* Altura del header */
+  color: rgb(0, 0, 0);
+  /* Color del texto */
+}
+
+.servicios {
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+
+/*CONTACTOS*******************************************/
+.contacto {
+  font-family: 'Arial';
+
+}
+
+/* CSS */
+#contactanos {
+  font-family: 'Arial';
+  font-weight: 800;
+  font-size: 85px;
+  /* Tamaño de fuente para pantallas grandes */
+  color: #000000 !important;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+/* Estilo para mantener el tamaño de fuente más pequeño en pantallas pequeñas */
+@media (max-width: 575.98px) {
+  #contactanos.text-sm {
+    font-size: 20px;
+    /* Tamaño de fuente para pantallas pequeñas */
+  }
+}
+
+/* Estilo para pantallas medianas */
+@media (max-width: 991.98px) {
+  #contactanos.text-md {
+    font-size: 30px;
+    /* Tamaño de fuente para pantallas medianas */
+  }
+}
+
+
+/* Estilo personalizado para los inputs y textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+  text-transform: uppercase;
+  /* Convertir texto a mayúsculas */
+  font-weight: bold;
+  color: #000;
+  /* Hacer el texto en negrita */
+}
+
+
+
+/* Estilo personalizado para el botón */
+.btn-square {
+  width: 30%;
+  /* Ancho del botón */
+  height: 50px;
+  /* Altura del botón */
+  background-color: #751fff;
+  /* Color de fondo morado */
+  border: none;
+  /* Sin borde */
+  border-radius: 0;
+  color: #ffffff;
+  font-weight: 500;
+  /* Sin redondeo de esquinas */
+}
+
+/* Estilo para el texto dentro del botón */
+.btn-square span {
+  font-weight: bold;
+  /* Hacer el texto en negrita */
+}
+
+/* Estilo personalizado para el ícono */
+.btn-square i {
+  display: none;
+  /* Ocultar el ícono por defecto */
+  color: white;
+}
+
+/* Estilo para mostrar el ícono al pasar el mouse (hover) */
+.btn-square:hover i {
+  display: inline-block;
+  /* Mostrar el ícono al pasar el mouse */
+  color: white;
+}

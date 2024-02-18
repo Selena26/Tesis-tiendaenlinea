@@ -1,0 +1,69 @@
+#acerca_de {
+    font-family: Arial, Lucida, sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    /* Tamaño por defecto para pantallas pequeñas y medianas */
+}
+
+#descripcion {
+    font-family: Arial, sans-serif;
+    line-height: 1.7em;
+    font-weight: 500;
+    color: #666;
+}
+
+@media (min-width: 992px) {
+
+    /* Estilos para pantallas grandes */
+    #acerca_de {
+        font-size: 80px;
+        /* Tamaño para pantallas grandes */
+    }
+
+    .img-fluid {
+        width: 90%;
+        /* Ancho del 90% en pantallas grandes */
+    }
+}
+
+@media (max-width: 991px) {
+
+    /* Estilos para pantallas pequeñas y medianas */
+    .img-fluid {
+        width: 40%;
+        /* Ancho del 20% en pantallas pequeñas */
+    }
+}
+
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Alinea verticalmente el contenido */
+    height: 100%;
+    /* Ocupa toda la altura del contenedor padre */
+    text-align: start;
+}
+
+.icon-container i {
+    font-size: 6em;
+    margin-bottom: 1rem;
+    /* Espacio entre el icono y el texto */
+}
+
+
+/* Estilo por defecto */
+.carousel-text {
+    font-size: 30px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 767.98px) {
+    .carousel-text-small {
+        font-size: 18px;
+        margin: 5px;
+    }
+}
