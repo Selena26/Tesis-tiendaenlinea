@@ -15,23 +15,58 @@
 </head>
 
 <body style="background-color: #f6f7fb">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light ">
+    <style>
+        /* Personalización para mostrar el menú al pasar el mouse */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            text-decoration: none;
+        }
+
+        /* Cambiar el color del texto y quitar el subrayado al pasar el mouse sobre las opciones del menú */
+        .navbar-nav .nav-link:hover {
+            color: #000;
+            /* Cambiar el color del texto */
+            text-decoration: none;
+            /* Quitar el subrayado */
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <div class="container">
             <img src="assets/img/LogoOnlineNegro.png" alt="" width="100px" height="100px" class="navbar-brand">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto ">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <style>
+                            a:hover {
+                                text-decoration: none;
+                                color: #004ac1;
+                            }
+                        </style>
                         <a class="nav-link mx-2 active" style="color: black;" aria-current="page"
                             href="index.html">INICIO</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" style="color: #0d8ce0;" href="productos.html">PRODUCTOS</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-2 dropdown-toggle" style="color: #0d8ce0;" href="productos.html"
+                            id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            PRODUCTOS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <style>
+                                .dropdown-item:hover {
+                                    text-decoration: none;
+                                }
+                            </style>
+                            <li><a class="dropdown-item" href="categoria-productos/equipos-gaming.html">EQUIPOS
+                                    GAMING</a></li>
+                            <li><a class="dropdown-item" href="categoria-productos/laptops.html">LAPTOPS</a></li>
+                            <li><a class="dropdown-item" href="categoria-productos/accesorios.html">ACCESORIOS</a></li>
+                            <li><a class="dropdown-item" href="categoria-productos/impresoras.html">IMPRESORAS</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-2" style="color: black;" href="quienes-somos.html">QUIENES SOMOS</a>
@@ -57,21 +92,7 @@
 
             </div>
         </div>
-        <div class="row justify-content-between">
-            <div class="col-6">
-                <p class="text-start" style="color: #666;">Mostrando 13–22 de 22 resultados</p>
-            </div>
-            <div class="col-3 text-end" style="color: #666;">
-                <select name="orderby" class="form-select" aria-label="Pedido de la tienda">
-                    <option value="menu_order" selected>Orden predeterminado</option>
-                    <option value="popularity">Ordenar por popularidad</option>
-                    <option value="rating">Ordenar por puntuación media</option>
-                    <option value="date">Ordenar por los últimos</option>
-                    <option value="price">Ordenar por precio: bajo a alto</option>
-                    <option value="price-desc">Ordenar por precio: alto a bajo</option>
-                </select>
-            </div>
-        </div>
+
         <style>
             .card {
                 position: relative;
@@ -99,11 +120,12 @@
                 /* Mostrar el icono al pasar el mouse */
             }
         </style>
-<div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mt-3 mb-5 p-5">
-    <!-- Productos -->
+        
+        <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mt-3 mb-5 p-5">
+            <!-- Productos -->
             <div class="col">
                 <div class="card h-10" style="border: none;">
-                    <a href="producto/acer-aspire-laptop.html">
+                    <a href="productos/acer-aspire-laptop.php">
                         <img src="assets/img/productos/Acer_FN-300x300.png" class="card-img-top" alt="...">
                     </a>
 
@@ -118,7 +140,9 @@
             </div>
             <div class="col">
                 <div class="card h-60" style="border: none;">
-                    <img src="assets/img/productos/CPUAMDR75700G-3-f-300x300.png" class="card-img-top" alt="...">
+                    <a href="productos/amd-ryzen-7-5700g-8-core.php">
+                        <img src="assets/img/productos/CPUAMDR75700G-3-f-300x300.png" class="card-img-top" alt="...">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">AMD Ryzen 7 5700G 8-Core</h5>
                         <p class="card-text" style="color: #751fff;">$179,90</p>
@@ -266,14 +290,14 @@
                             </a>
                         </li>
                         <li class="page-item active"><a class="page-link" href="productos.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="producto/producto-page=2.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="productos/producto-page=2.html">2</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
 
-    
+
 
     <section class="bg-dark text-light">
         <div class="container text-center text-md-start mt-5">
