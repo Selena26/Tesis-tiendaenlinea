@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 5 Modal en el Lateral Derecho</title>
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilo para la ventana modal en el lateral derecho */
+    .modal.right .modal-dialog {
+      position: fixed;
+      right: 0;
+      margin: auto;
+      width: 400px; /* Ancho de la ventana modal */
+      height: 100%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .modal.right .modal-content {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .modal.right .modal-body {
+      padding: 15px;
+    }
+
+    @media (max-width: 575.98px) {
+      .modal.right .modal-dialog {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <!-- Botón para abrir la ventana modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalRight">
+    Abrir Ventana Modal en el Lateral Derecho
+  </button>
+
+  <!-- Ventana modal en el lateral derecho -->
+  <div class="modal right fade" id="exampleModalRight" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ventana Modal en el Lateral Derecho</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Contenido de la ventana modal...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript de Bootstrap (requerido) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
