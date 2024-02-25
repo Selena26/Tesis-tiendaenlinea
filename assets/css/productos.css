@@ -1,0 +1,49 @@
+.card {
+    position: relative;
+}
+
+.card-img-top {
+    transition: opacity 0.5s;
+}
+
+.card:hover .card-img-top {
+    opacity: 0.3;
+    /* Cambiar la opacidad al pasar el mouse */
+}
+
+.icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.card:hover .icon-overlay {
+    display: block;
+    /* Mostrar el icono al pasar el mouse */
+}
+a {
+    color: rgb(104, 104, 104);
+    /* Color normal */
+    text-decoration: underline;
+    /* Quitamos el subrayado por defecto */
+}
+
+/* Estilos adicionales aquí */
+.thumbnail {
+    cursor: pointer;
+}
+
+#canvas:hover {
+    cursor: zoom-in;
+}
+.link {
+    color: #000 ! important;           /* Color normal */           
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #2ea3f2;
+    text-decoration: none;
+}
