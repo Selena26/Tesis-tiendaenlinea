@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargar imágenes en Canva con zoom y carrusel</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos adicionales aquí */
+    .thumbnail {
+      cursor: pointer;
+    }
+
+    #canvasContainer {
+      position: relative;
+      overflow: hidden;
+      width: 600px; /* Ajusta el ancho del lienzo según tu diseño */
+      height: 400px; /* Ajusta el alto del lienzo según tu diseño */
+    }
+
+    #canvas {
+      display: block;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body onload="toggleImagen('assets/img/icono_mantenimiento.png'); cargarImagenEnCarrusel('assets/img/icono_mantenimiento.png');">
+
+<div class="container mt-5">
+    <div class="row mt-5">
+        <div class="col-md-12" id="canvasContainer">
+          <canvas id="canvas" width="600" height="400" style="border:1px solid #000;"></canvas>
+        </div>
+      </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail" onclick="toggleImagen('assets/img/icono_mantenimiento.png'); cargarImagenEnCarrusel('assets/img/icono_mantenimiento.png');">
+        <img src="assets/img/icono_mantenimiento.png" alt="Acer_FN" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail" onclick="toggleImagen('assets/img/icono_mantenimiento.png'); cargarImagenEnCarrusel('assets/img/icono_mantenimiento.png');">
+        <img src="assets/img/icono_mantenimiento.png" alt="Acer1_FN" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail" onclick="toggleImagen('assets/img/icono_repacacion.png'); cargarImagenEnCarrusel('assets/img/icono_repacacion.png');">
+        <img src="assets/img/icono_repacacion.png" alt="Acer2_FN" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="carouselItem">
+            <!-- La imagen por defecto se carga aquí -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var imagenActual = null;
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  var factorZoom = 1.1; // Ajusta el nivel de zoom aquí
+
+  function toggleImagen(ruta) {
+    if (imagenActual !== ruta) {
+      var imagen = new Image();
+      imagen.src = ruta;
+      imagen.onload = function() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(imagen, 0, 0, canvas.width, canvas.height);
+        imagenActual = ruta;
+      };
+    }
+  }
+
+  function cargarImagenEnCarrusel(ruta) {
+    var carruselItem = document.getElementById('carouselItem');
+    carruselItem.innerHTML = ''; // Limpiar el contenido actual del carrusel
+    var imagen = document.createElement('img');
+    imagen.src = ruta;
+    imagen.classList.add('d-block', 'w-100');
+    carruselItem.appendChild(imagen);
+  }
+
+  // Cargar la imagen por defecto en el carrusel al cargar la página
+</script>
+
+</body>
+</html>
