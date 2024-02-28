@@ -51,7 +51,7 @@ session_start();
                         <a class="nav-link mx-2 active" style="color: black;" aria-current="page" href="../index.html">INICIO</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link mx-2 dropdown-toggle" style="color: #0d8ce0;" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                        <a class="nav-link mx-2 dropdown-toggle" style="color: #0d8ce0;" href="../productos.html" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
                             PRODUCTOS
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -77,27 +77,23 @@ session_start();
         </div>
     </nav>
 
-    <!-- Servicios -->
-    <style>
 
-    </style>
     <div class="container mt-4">
         <div class="row">
             <div class="col-9">
                 <nav aria-label="Breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html" style="color: #666; text-decoration: none;">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="../categoria-producto/laptops.html" style="text-decoration: none; color: #666;">Laptops</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">ACER Aspire Laptop</li>
+                        <li class="breadcrumb-item"><a href="../categoria-producto/accesorios.html" style="text-decoration: none; color: #666;">Accesorios</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">AMD Ryzen 7 5700G 8-Core</li>
                     </ol>
                 </nav>
                 <!-- el producto y sus tres imagenes -->
                 <div class="row ">
-
                     <div id="rowProductoAgregado" class="row mt-3 d-none">
                         <div class="col">
                             <div class="alert alert-primary" role="alert">
-                                “ACER Aspire Laptop” se ha añadido a tu carrito.
+                                “AMD Ryzen 7 5700G” se ha añadido a tu carrito.
                                 <a class="btn btn-light" href="../carrito.php">Ver carrito</a>
                             </div>
                         </div>
@@ -113,40 +109,42 @@ session_start();
 
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="thumbnail" onclick="toggleImagen('../assets/img/productos/Acer_FN-300x300.png')">
-                                    <img src="../assets/img/productos/Acer_FN-300x300.png" alt="Imagen 1" class="img-fluid">
+                                <div class="thumbnail" onclick="toggleImagen('../assets/img/3_productos/CPUAMDR75700G-3-f.png')">
+                                    <img src="../assets/img/3_productos/CPUAMDR75700G-3-f.png" alt="Imagen 1" class="img-fluid">
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="thumbnail" onclick="toggleImagen('../assets/img/productos/Acer1_FN.png')">
-                                    <img src="../assets/img/productos/Acer1_FN.png" alt="Imagen 2" class="img-fluid">
+                                <div class="thumbnail" onclick="toggleImagen('../assets/img/3_productos/CPUAMDR75700G-2-f.png')">
+                                    <img src="../assets/img/3_productos/CPUAMDR75700G-2-f.png" alt="Imagen 2" class="img-fluid">
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="thumbnail" onclick="toggleImagen('../assets/img/productos/Acer2_FN.png')">
-                                    <img src="../assets/img/productos/Acer2_FN.png" alt="Imagen 3" class="img-fluid">
+                                <div class="thumbnail" onclick="toggleImagen('../assets/img/3_productos/CPUAMDR75700G-1-f.png')">
+                                    <img src="../assets/img/3_productos/CPUAMDR75700G-1-f.png" alt="Imagen 3" class="img-fluid">
                                 </div>
                             </div>
                         </div> <!--row-->
-                    </div>
+                    </div> <!--Col-6-->
 
 
                     <div class="col-md-6">
                         <!-- Product Summary -->
 
                         <h1 class="product-title">AMD Ryzen 7 5700G 8-Core</h1>
-                        <p class="price" style="color: #2EA3F2; font-size: 32px;">$619,00</p>
+                        <p class="price" style="color: #2EA3F2; font-size: 32px;">$179,00</p>
                         <div class="product-description" style="color: #666;">
                             <ul>
-                                <li><strong>Marca:</strong> Acer</li>
-                                <li><strong>Modelo:</strong> A315-24P</li>
-                                <li><strong>Procesador:</strong> Intel Core i5-1135G7</li>
-                                <li><strong>Tamaño de pantalla:</strong> 15.6 Pulgadas</li>
-                                <li><strong>Almacenamiento:</strong> SSD PCIe de 2 TB</li>
-                                <li><strong>Memoria RAM:</strong> 36 GB</li>
-                                <li><strong>Color:</strong> Plateado</li>
-                                <li><strong>Sistema operativo:</strong> Windows 11 Pro</li>
-                                <li><strong>Descripción de la tarjeta gráfica:</strong> Intel UHD Graphics</li>
+                                <li><strong>Marca:</strong> AMD</li>
+                                <li><strong>Modelo de CPU:</strong> AMD Ryzen 7 5700G</li>
+                                <li><strong>Dimensiones del producto</strong> 1,57 x 1,57 x 0,24 pulgadas</li>
+                                <li><strong>Color:</strong>Gris Cerámica</li>
+                                <li><strong>Marca del procesador:</strong> AMD</li>
+                                <li><strong>Número de procesadores:</strong> 8</li>
+                                <li><strong>Fabricante de CPU:</strong> AMD</li>
+                                <li><strong>Velocidad de la CPU:</strong> 4,6 GHz</li>
+                                <li><strong>Zócalo de la CPU:</strong> Enchufe AM4</li>
+                                <li><strong>Serie :</strong> AMD Ryzen 7 5700G con enfriador Wraith Stealth</li>
+                                <li><strong>Número de modelo del artículo:</strong> AMD Ryzen 7 5700G </li>
                             </ul>
                         </div>
                         <p class="stock in-stock" style="color: #b3af54;">10 disponibles</p>
@@ -160,24 +158,26 @@ session_start();
                                 </div>
 
                                 <?php
-                                $id_producto = 2; // ID único del producto
-                                // Definir el precio por producto
-                                $precio_por_producto = 179.90; // Precio por cada producto
-                                $ruta_img = '../assets/img/productos/'; // Ruta de la imagen del producto
-                                $producto = 'AMD Ryzen 7'; // Nombre del producto
 
-                                // Guardar los datos del segundo producto en la sesión usando un índice único
-                                if (!isset($_SESSION['precio_por_producto_2'])) {
-                                    $_SESSION['precio_por_producto_2'] = $precio_por_producto;
+
+                                // Definir el precio por producto
+                                $precio_por_producto = 179; // Precio por cada producto
+                                $ruta_img = '../assets/img/3_productos/CPUAMDR75700G-3-f.png'; // Ruta de la imagen del producto
+                                // Nombre del producto
+                                $producto = 'AMD Ryzen 7 5700G 8-Core'; // Nombre del producto
+                                $marca = 'AMD'; // Marca del producto
+                                // Guardar el precio, la ruta de la imagen y el nombre del producto en la sesión si no están definidos previamente
+                                if (!isset($_SESSION['precio_por_producto'])) {
+                                    $_SESSION['precio_por_producto'] = $precio_por_producto;
                                 }
-                                if (!isset($_SESSION['ruta_img_2'])) {
-                                    $_SESSION['ruta_img_2'] = $ruta_img;
+                                if (!isset($_SESSION['ruta_img'])) {
+                                    $_SESSION['ruta_img'] = $ruta_img;
                                 }
-                                if (!isset($_SESSION['producto_2'])) {
-                                    $_SESSION['producto_2'] = $producto;
+                                if (!isset($_SESSION['producto'])) {
+                                    $_SESSION['producto'] = $producto;
                                 }
-                                if (!isset($_SESSION['id_producto_2'])) {
-                                    $_SESSION['id_producto_2'] = $id_producto;
+                                if (!isset($_SESSION['marca'])) {
+                                    $_SESSION['marca'] = $marca;
                                 }
                                 ?>
 
@@ -187,7 +187,7 @@ session_start();
                         </form>
 
                         <div class="product-meta">
-                            <span>Categoría: <a href="../categoria-producto/laptops.html" class="text-primary" style="text-decoration: none;">Laptops</a></span>
+                            <span>Categoría: <a href="../categoria-producto/accesorios.html" class="text-primary" style="text-decoration: none;">Accesorios</a></span>
                         </div>
                     </div>
                 </div> <!--row-->
@@ -204,18 +204,29 @@ session_start();
                         <div class="tab-content" id="product-tabs-content">
                             <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
                                 <h2>Descripción</h2>
-                                <ul>
-                                    <li>RAM de alta velocidad y espacio enorme: 36 GB de RAM DDR4 de alto ancho de banda
-                                        para ejecutar sin problemas múltiples aplicaciones y pestañas del navegador a la
-                                        vez; unidad de estado sólido PCIe de 2 TB para un amplio espacio de almacenamiento
-                                    </li>
-                                    <li>Procesador: Intel Core i5-1135G7 (4 núcleos, 8 hilos, caché L3 de 8 MB, frecuencia
-                                        base de 2.40 GHz, frecuencia turbo máxima de hasta 4.20 GHz); gráficos Intel Iris Xe
-                                    </li>
-                                    <li>Pantalla: IPS FHD de 15.6 pulgadas (1920 x 1080), 300 nits</li>
-                                    <li>Especificaciones técnicas: 2 USB 3.0 tipo A, 1 USB 2.0 tipo A, 1 HDMI, 1 RJ-45, 1
-                                        combo de auriculares/micrófono; Wi-Fi 6; Bluetooth 5</li>
-                                </ul>
+                                <p>El procesador proporciona una ejecución rápida y confiable de tareas con la máxima eficiencia. Frecuencia de gráficos: 2200 MHZ. Número de núcleos de CPU: 8. Temperatura máxima de funcionamiento (Tjmax): 89 °C.
+
+                                </p>
+                                <p>
+                                    Procesador de la línea de productos Ryzen 7 para una mejor usabilidad y mayor eficiencia
+
+                                </p>
+                                <p> Tecnología de proceso de 5 nm para un rendimiento confiable con máxima productividad
+                                </p>
+                                <p> El núcleo del procesador Octa-core (8 Core) permite realizar múltiples tareas con gran confiabilidad y rápida velocidad de procesamiento
+                                </p>
+                                <p>
+                                    La memoria caché de 8 MB L2 + 96 MB L3 proporciona una excelente tasa de aciertos en un tiempo de acceso corto, lo que permite mejorar el rendimiento del sistema.
+
+                                </p>
+                                <p>
+                                    Procesador con velocidad de reloj de 4,20 GHz para una ejecución rápida y confiable de instrucciones para garantizar la máxima conveniencia y viabilidad
+
+                                </p>
+                                <p>
+                                    Viene con el controlador de gráficos AMD Radeon para una salida de gráficos increíble.</p>
+
+                                </p>
                             </div>
 
                         </div>
@@ -230,7 +241,7 @@ session_start();
                             <!-- Productos -->
                             <div class="col">
                                 <div class="card h-10" style="border: none;">
-                                    <a href="prueba.html">
+                                    <a href="acer-aspire-laptop.php">
                                         <img src="../assets/img/productos/Acer_FN-300x300.png" class="card-img-top" alt="...">
                                     </a>
 
@@ -245,7 +256,9 @@ session_start();
                             </div>
                             <div class="col">
                                 <div class="card h-60" style="border: none;">
-                                    <img src="../assets/img/productos/CPUAMDR75700G-3-f-300x300.png" class="card-img-top" alt="...">
+                                    <a href="amd-ryzen-7-5700g-8-core.php">
+                                        <img src="../assets/img/productos/CPUAMDR75700G-3-f-300x300.png" class="card-img-top" alt="...">
+                                    </a>
                                     <div class="card-body">
                                         <h5 class="card-title">AMD Ryzen 7 5700G 8-Core</h5>
                                         <p class="card-text" style="color: #751fff;">$179,90</p>
@@ -257,7 +270,9 @@ session_start();
                             </div>
                             <div class="col">
                                 <div class="card h-60" style="border: none;">
-                                    <img src="../assets/img/productos/amd-555006-300x300.png" class="card-img-top" alt="...">
+                                    <a href="amd-ryzen-5-5500-6-core.php">
+                                        <img src="../assets/img/productos/amd-555006-300x300.png" class="card-img-top" alt="...">
+                                    </a>
                                     <div class="card-body">
                                         <h5 class="card-title">AMD Ryzen™ 5 5500 6-Core</h5>
                                         <p class="card-text" style="color: #751fff;">$98,41</p>
@@ -270,10 +285,11 @@ session_start();
                         </div>
                     </div>
                 </div><!--row-->
+
+
             </div>
             <!-- la segunda columna general donde esta el boton de carrito y los productos recomendados -->
-            <div class="col-3" style="border-left: 1px solid #ababab75;">
-
+            <div class="col-2" style="border-left: 1px solid #ababab75;">
                 <!-- icono -->
                 <button id="openModalBtn" type="button" class="btn btn-link">
                     <span id="cartValue">
@@ -345,7 +361,7 @@ session_start();
                                 text-decoration: none;
                             }
                         </style>
-                        <a href="yeyian-yari-ii-gaming-pc.php" class="link">
+                        <a href="cyberpowerpc-gamer-xtreme-vr.php" class="link">
                             <img src="../assets/img/productos/CPUG_FN-300x300.png" alt="" width="200px">
                             <h5 class="card-title">CyberPowerPC Gamer Xtreme VR</h5>
                         </a>
@@ -356,7 +372,6 @@ session_start();
             </div>
         </div>
     </div>
-
 
 
     <!--FOOTER --->
@@ -429,144 +444,202 @@ session_start();
                     <h5 class="modal-title" id="exampleModalLabel">Tu carrito</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <?php
-                    // Verifica si el carrito está vacío
-                    if (empty($_SESSION['cart_quantity'])) {
-                        echo '<h5>¡Tu carrito está actualmente vacío!</h5>';
-                    } else {
-                        // Si el carrito no está vacío, muestra los detalles del producto
-                        echo '<h5>Detalles del Producto:</h5>';
-                        echo "<p>Nombre del producto: {$_SESSION['producto']}</p>";
-                        echo "<img src='{$_SESSION['ruta_img']}' alt='Imagen del producto'>";
-                        echo "<p>Precio por producto: {$_SESSION['precio_por_producto']}</p>";
-                        echo "<label for='quantity'>Cantidad en el carrito:</label>";
-                        echo "<input type='number' id='quantity' name='quantity' value='{$_SESSION['cart_quantity']}' readonly>";
-                        echo "<p>Precio total del carrito: {$_SESSION['cart_price']}</p>";
-                    }
-                    ?>
+
+
+                <!-- Bootstrap Bundle with Popper -->
+                <div class="modal right fade" id="exampleModalRight" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tu carrito</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <?php
+
+                            // Verificar si se ha hecho clic en el botón de eliminar la sesión
+                            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['eliminar_sesion'])) {
+                                // Eliminar todos los datos de la sesión
+                                session_destroy();
+
+                                // Redirigir a la misma página después de eliminar la sesión
+                                header("Location: " . $_SERVER['PHP_SELF']);
+                                // recargar la pagina totalmente
+                                echo "<meta http-equiv='refresh' content='0'>";
+                                // redirigir a productos.html
+                                exit; // Terminar la ejecución del script después de redirigir
+                            }
+                            ?>
+
+                            <div class="modal-body">
+                                <?php
+                                // Verifica si el carrito está vacío
+                                if (empty($_SESSION['cart_quantity'])) {
+                                    echo '<h5>¡Tu carrito está actualmente vacío!</h5>';
+                                } else {
+                                    echo "<div class='row'>";
+                                    echo "<div class='col-3'>";
+                                    echo "<img src='{$_SESSION['ruta_img']}' alt='Imagen del producto' width='100%'>";
+                                    echo "</div>";
+                                    echo "<div class='col-6'>";
+                                    echo "{$_SESSION['producto']}";
+                                    echo "<p>$ {$_SESSION['precio_por_producto']}</p>";
+                                    echo "Marca " . $_SESSION['marca'];
+
+                                    // Imprimir la cantidad con botones de aumentar y disminuir
+                                    echo "<div class='input-group'>";
+                                    echo "<span class='input-group-text'>Cantidad</span>";
+                                    echo "<input type='text' class='form-control' id='quantity' value='{$_SESSION['cart_quantity']}' aria-describedby='basic-addon1' readonly>";
+                                    echo "</div>";
+                                    echo "<form method='post'>";
+                                    echo "<button type='submit' name='eliminar_sesion' class='btn btn-outline-danger'>Eliminar Sesión</button>";
+                                    echo "</form>";
+
+                                    echo "</div>";
+                                    echo "<div class='col-3'>";
+                                    echo "<strong>$ {$_SESSION['cart_price']}</strong>";
+                                    echo "</div>";
+                                    echo "</div>"; // Cierra la fila
+
+                                    // Agregar el botón para eliminar la sesión
+
+                                }
+                                ?>
+                            </div>
+
+                            <div class="modal-footer">
+                                <hr>
+                                <br>
+                                <style>
+                                    .carrito_a:hover {
+                                        text-decoration: none;
+                                    }
+                                </style>
+                                <a href="../carrito.php" class="btn btn-secondary carrito_a">Ver mi Carrito</a>
+                                <a href="../pago.php" class="btn btn-primary carrito_a">Ir a finalizar compra</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="modal-footer">
-                    <hr>
-                    <br>
-                    <style>
-                        .carrito_a:hover {
-                            text-decoration: none;
-                        }
-                    </style>
-                    <a href="../carrito.php" class="btn btn-secondary carrito_a">Ver mi Carrito</a>
-                    <a href="../pago.php" class="btn btn-primary carrito_a">Ir a finalizar compra</a>
-                </div>
             </div>
-        </div>
-    </div>
-
-    </div>
 
 
-    <!-- Footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        var imagenActual = null;
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
+            <!-- Footer -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+            <script>
+                var imagenActual = null;
+                var canvas = document.getElementById('canvas');
+                var ctx = canvas.getContext('2d');
 
-        function toggleImagen(ruta) {
-            if (imagenActual !== ruta) {
-                var imagen = new Image();
-                imagen.src = ruta;
-                imagen.onload = function() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    ctx.drawImage(imagen, 0, 0, canvas.width, canvas.height);
-                    imagenActual = ruta;
-                };
-            }
-        }
-
-        function cargarImagenPorDefecto() {
-            var imagenPorDefecto = new Image();
-            imagenPorDefecto.src = '../assets/img/productos/Acer_FN-300x300.png'; // Ruta de la imagen por defecto
-            imagenPorDefecto.onload = function() {
-                ctx.drawImage(imagenPorDefecto, 0, 0, canvas.width, canvas.height);
-                imagenActual = '../assets/img/productos/Acer_FN-300x300.png'; // Actualiza la ruta de la imagen actual
-            };
-        }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- cdn de jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- BS5 JS (requiere Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script personalizado -->
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <script src="script.js">
-
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            // Manejar el evento click del botón "Añadir al carrito"
-            $("#addToCartBtn").click(function() {
-                // Realizar una solicitud AJAX para actualizar solo el precio total del carrito
-                $.ajax({
-                    url: "precio_carrito.php",
-                    type: "POST",
-                    data: {
-                        // Puedes enviar datos adicionales aquí si es necesario
-                    },
-                    success: function(response) {
-                        // Actualizar el contenido del elemento HTML que muestra el precio total del carrito
-                        $("#cartValue").html(response);
-                    },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.log(error);
+                function toggleImagen(ruta) {
+                    if (imagenActual !== ruta) {
+                        var imagen = new Image();
+                        imagen.src = ruta;
+                        imagen.onload = function() {
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                            ctx.drawImage(imagen, 0, 0, canvas.width, canvas.height);
+                            imagenActual = ruta;
+                        };
                     }
-                });
+                }
 
-                // Realizar una solicitud AJAX para actualizar el carrito y el precio total
-                var quantity2 = $("#quantity2").val();
+                function cargarImagenPorDefecto() {
+                    var imagenPorDefecto = new Image();
+                    imagenPorDefecto.src = '../assets/img/3_productos/CPUAMDR75700G-3-f.png'; // Ruta de la imagen por defecto
+                    imagenPorDefecto.onload = function() {
+                        ctx.drawImage(imagenPorDefecto, 0, 0, canvas.width, canvas.height);
+                        imagenActual = '../assets/img/3_productos/CPUAMDR75700G-3-f.png'; // Actualiza la ruta de la imagen actual
+                    };
+                }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <!-- cdn de jquery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <!-- BS5 JS (requiere Popper.js) -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Script personalizado -->
+            <script src="script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-                $.ajax({
-                    url: "actualizar_carrito.php",
-                    type: "POST",
-                    data: {
-                        quantity2: quantity2 // Suponiendo que siempre se agrega un producto a la vez
-                    },
-                    success: function(response) {
-                        // Actualizar el contenido del modal con los datos actualizados del carrito
-                        $("#exampleModalRight .modal-body").html(response);
-                    },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.log(error);
-                    }
-                });
+            <script src="script.js">
 
-                // Realizar una solicitud AJAX para actualizar solo el precio total del carrito
-                $.ajax({
-                    url: "precio_carrito.php",
-                    type: "POST",
-                    data: {
-                        // Puedes enviar datos adicionales aquí si es necesario
-                    },
-                    success: function(response) {
-                        // Actualizar el contenido del elemento HTML que muestra el precio total del carrito
-                        $("#cartValue").html(response);
-                    },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.log(error);
-                    }
+            </script>
+
+            <script>
+                $(document).ready(function() {
+                    // Manejar el evento click del botón "Añadir al carrito"
+                    $("#addToCartBtn").click(function() {
+                        // Realizar una solicitud AJAX para actualizar solo el precio total del carrito
+                        $.ajax({
+                            url: "precio_carrito.php",
+                            type: "POST",
+                            data: {
+                                // Puedes enviar datos adicionales aquí si es necesario
+                            },
+                            success: function(response) {
+                                // Actualizar el contenido del elemento HTML que muestra el precio total del carrito
+                                $("#cartValue").html(response);
+                            },
+                            error: function(xhr, status, error) {
+                                // Manejar errores si es necesario
+                                console.log(error);
+                            }
+                        });
+
+                        // Realizar una solicitud AJAX para actualizar el carrito y el precio total
+                        // obtener la cantidad del producto
+                        var quantity = $("#quantity").val();
+
+                        $.ajax({
+                            url: "actualizar_carrito.php",
+                            type: "POST",
+                            data: {
+                                quantity: quantity
+                            },
+                            success: function(response) {
+                                // Actualizar el contenido del modal con los datos actualizados del carrito
+                                $("#exampleModalRight .modal-body").html(response);
+                            },
+                            error: function(xhr, status, error) {
+                                // Manejar errores si es necesario
+                                console.log(error);
+                            }
+                        });
+
+                        // Realizar una solicitud AJAX para actualizar solo el precio total del carrito
+                        $.ajax({
+                            url: "precio_carrito.php",
+                            type: "POST",
+                            data: {
+                                // Puedes enviar datos adicionales aquí si es necesario
+                            },
+                            success: function(response) {
+                                // Actualizar el contenido del elemento HTML que muestra el precio total del carrito
+                                $("#cartValue").html(response);
+                            },
+                            error: function(xhr, status, error) {
+                                // Manejar errores si es necesario
+                                console.log(error);
+                            }
+                        });
+                    });
                 });
-            });
-        });
-    </script>
+            </script>
+
+            <script>
+                $(document).ready(function() {
+                    // Manejar el evento click del botón "Añadir al carrito"
+                    $("#addToCartBtn").click(function() {
+                        // Esperar 3 segundos antes de recargar la página
+                        setTimeout(function() {
+                            location.reload();
+                        }, 500); // 3000 milisegundos = 3 segundos
+                    });
+                });
+            </script>
 
 
 </body>

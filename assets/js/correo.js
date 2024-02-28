@@ -1,10 +1,8 @@
 $(document).ready(function () {
     $('#formulario-correo').submit(function (event) {
         event.preventDefault(); // Prevenir el envío del formulario por defecto
-
         // Obtener los datos del formulario
         var formData = $(this).serialize();
-
         // Enviar el formulario mediante AJAX
         $.ajax({
             type: 'POST',

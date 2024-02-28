@@ -17,32 +17,90 @@
         font-weight: bold;
         color: black;
     }
+    /* Estilos personalizados para los input */
+    .form-control,
+        .form-select,
+        .form-select option {
+            color: #898989 !important;
+            /* Color de las letras */
+            border-radius: 0 !important;
+            /* Bordes totalmente cuadrados */
+            background-color: #ebebeb;
+            /* Fondo fijo */
+            border: none;
+            height: 50px !important;
+        }
+
+        .form-control:focus,
+        .form-select:focus option {
+            color: #2e2e2e !important;
+            /* Color de las letras */
+            border-radius: 0 !important;
+            /* Bordes totalmente cuadrados */
+            background-color: #eae8e8;
+            /* Fondo fijo */
+            border: none;
+        }
 </style>
 
 <body style="background-color: #f6f7fb">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light ">
+    <style>
+        /* Personalización para mostrar el menú al pasar el mouse */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            text-decoration: none;
+        }
+    
+        /* Cambiar el color del texto y quitar el subrayado al pasar el mouse sobre las opciones del menú */
+         .navbar-nav .nav-link:hover {
+            color: #000;
+            /* Cambiar el color del texto */
+            text-decoration: none;
+            /* Quitar el subrayado */
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <div class="container">
             <img src="assets/img/LogoOnlineNegro.png" alt="" width="100px" height="100px" class="navbar-brand">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto ">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <style>
+                           a:hover {
+                                text-decoration: none;
+                                color: #004ac1;
+                            }
+                        </style>
                         <a class="nav-link mx-2 active" style="color: black;" aria-current="page"
                             href="index.html">INICIO</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2"  style="color: black;" href="productos.html">PRODUCTOS</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-2 dropdown-toggle" style="color: black;" href="productos.html"
+                            id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            PRODUCTOS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <style>
+                                .dropdown-item:hover {
+                                    text-decoration: none;
+                                }
+                            </style>
+                            <li><a class="dropdown-item" href="categoria-producto/equipos-gaming.html">EQUIPOS GAMING</a></li>
+                            <li><a class="dropdown-item" href="categoria-producto/laptops.html">LAPTOPS</a></li>
+                            <li><a class="dropdown-item" href="categoria-producto/accesorios.html">ACCESORIOS</a></li>
+                            <li><a class="dropdown-item" href="categoria-producto/impresoras.html">IMPRESORAS</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2"  style="color: black;" href="quienes-somos.html">QUIENES SOMOS</a>
+                        <a class="nav-link mx-2" style="color: black;" href="quienes-somos.html">QUIENES SOMOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2"  style="color: #0d8ce0;" href="contacto.html">CONTACTO</a>
+                        <a class="nav-link mx-2" style="color:#0d8ce0;" href="contacto.html">CONTACTO</a>
                     </li>
                 </ul>
             </div>
@@ -50,19 +108,19 @@
     </nav>
     <section class="container-fluid container contacto">
         <div class="row">
-        <strong id="contactanos" class="text-lg text-sm text-md">Contactanos</strong>
+        <strong id="contactanos" class="text-lg text-sm text-md">Contactanos.</strong>
         </div>
         <div class="row mt-5">
             <div class="col-12 col-lg-6">
-                <strong style="font-size: 20px; font-weight: 600; color: black;">Soporte y ayuda</strong> <br>
+                <strong style="font-size: 20px; font-weight: 600; color: black;">Soporte y ayuda:</strong> <br>
                 <strong style="font-size: 40px; font-weight: 800; color: black; font-family: sans-serif;">(255)
                     352-6258</strong> <br>
-                <strong style="font-size: 20px; font-weight: 800; color: black; font-family: sans-serif;">Email</strong>
-                <p class="text">info@onlinedcsolution.com</p> <br>
-                <strong style="font-size: 20px; font-weight: 800; color: black; font-family: sans-serif;">Shop</strong>
+                <strong style="font-size: 20px; font-weight: 800; color: black; font-family: sans-serif;">Email:</strong>
+                <p class="text">high-code@onlinedcsolution.com</p> <br>
+                <strong style="font-size: 20px; font-weight: 800; color: black; font-family: sans-serif;">Ubicación:</strong>
                 <p>
-                    Av. Quito y Abraham calazacon. <br>
-                    Como referencia frente a farmacias cruz azul, local esquinero
+                    Av. Quito y Abraham calazacón. <br>
+                    Como referencia, frente a farmacias cruz azul, local esquinero
                 </p>
             </div> <!-- /cierro col-6-->
    

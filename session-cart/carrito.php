@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-$total = 0;
 
 ?>
 
@@ -21,16 +20,15 @@ $total = 0;
         </tr>
         <?php if(isset($_SESSION['carrito'])): ?>
             <?php foreach($_SESSION['carrito'] as $producto): ?>
-                <?php
-                $subtotal = $producto['precio'] * $producto['cantidad'];
-                $total += $subtotal;
-                ?>
                 <tr>
-                    <td><?php echo $producto['nombre']; ?></td>
-                    <td>$<?php echo $producto['precio']; ?></td>
+                    <td><?php echo $producto['producto']; ?></td>
+                    <td>$<?php echo $producto['precio_por_producto']; ?></td>
                     <td><?php echo $producto['cantidad']; ?></td>
-                    <td>$<?php echo $subtotal; ?></td>
+                    <td>$<?php echo $producto['precio_total']; ?></td>
                 </tr>
+                <?php
+                $total += $producto['precio_total'];
+                ?>
             <?php endforeach; ?>
         <?php endif; ?>
         <tr>
