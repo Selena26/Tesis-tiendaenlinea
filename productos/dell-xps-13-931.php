@@ -155,7 +155,7 @@ session_start();
                             </ul>
                         </div>
                         <p class="stock in-stock" style="color: #b3af54;">10 disponibles</p>
-                        <form class="cart" id="productForm" method="post" enctype="multipart/form-data">
+                        <form class="cart" id="productForm" action="#" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-3">
                                     <input type="number" id="quantity" class="form-control" name="quantity" value="1" min="1" max="10" step="1" placeholder="Cantidad de productos">
@@ -163,14 +163,13 @@ session_start();
                                 <div class="col-md-6">
                                     <button type="button" class="btn2 btn2-square btn-block" id="addToCartBtn">Añadir al carrito</button>
                                 </div>
-
                                 <?php
-                                $id_producto = 1; // ID único del producto
-                                // Definir el precio por producto
-                                $precio_por_producto = 619; // Precio por cada producto
-                                $ruta_img = '../assets/img/productos/Acer_FN-300x300.png'; // Ruta de la imagen del producto
-                                $producto = 'ACER Aspire Laptop'; // Nombre del producto
 
+                                // Definir el precio por producto
+                                $precio_por_producto = 1300; // Precio por cada producto
+                                $ruta_img = '../assets/img/productos/Dell_XP_1_F-e1704333164768-300x300.png'; // Ruta de la imagen del producto
+                                $producto = 'Dell XPS 13 931'; // Nombre del producto
+                                $marca = 'Dell'; // Marca del producto
                                 // Guardar el precio, la ruta de la imagen y el nombre del producto en la sesión si no están definidos previamente
                                 if (!isset($_SESSION['precio_por_producto'])) {
                                     $_SESSION['precio_por_producto'] = $precio_por_producto;
@@ -181,11 +180,12 @@ session_start();
                                 if (!isset($_SESSION['producto'])) {
                                     $_SESSION['producto'] = $producto;
                                 }
-                                if (!isset($_SESSION['id_producto'])) {
-                                    $_SESSION['id_producto'] = $id_producto;
+                                if (!isset($_SESSION['marca'])) {
+                                    $_SESSION['marca'] = $marca;
                                 }
-
                                 ?>
+
+
                             </div>
                         </form>
 
@@ -289,8 +289,6 @@ session_start();
                     </span>
                     <i class="bi bi-cart"></i>
                 </button>
-
-
 
                 <script>
                     // Esperar a que el documento esté cargado
@@ -432,24 +430,59 @@ session_start();
                     <h5 class="modal-title" id="exampleModalLabel">Tu carrito</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
+
+                <?php
+
+                // Verificar si se ha hecho clic en el botón de eliminar la sesión
+                if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['eliminar_sesion'])) {
+                    // Eliminar todos los datos de la sesión
+                    session_destroy();
+
+                    // Redirigir a la misma página después de eliminar la sesión
+                    header("Location: " . $_SERVER['PHP_SELF']);
+                    // recargar la pagina totalmente
+                    echo "<meta http-equiv='refresh' content='0'>";
+                    // redirigir a productos.html
+                    exit; // Terminar la ejecución del script después de redirigir
+                }
+                ?>
+
                 <div class="modal-body">
                     <?php
                     // Verifica si el carrito está vacío
                     if (empty($_SESSION['cart_quantity'])) {
                         echo '<h5>¡Tu carrito está actualmente vacío!</h5>';
                     } else {
-                        // Si el carrito no está vacío, muestra los detalles del producto
-                        echo '<h5>Detalles del Producto:</h5>';
-                        echo "<p>Nombre del producto: {$_SESSION['producto']}</p>";
-                        echo "<img src='{$_SESSION['ruta_img']}' alt='Imagen del producto'>";
-                        echo "<p>Precio por producto: {$_SESSION['precio_por_producto']}</p>";
-                        echo "<label for='quantity'>Cantidad en el carrito:</label>";
-                        echo "<input type='number' id='quantity' name='quantity' value='{$_SESSION['cart_quantity']}' readonly>";
-                        echo "<p>Precio total del carrito: {$_SESSION['cart_price']}</p>";
+                        echo "<div class='row'>";
+                        echo "<div class='col-3'>";
+                        echo "<img src='{$_SESSION['ruta_img']}' alt='Imagen del producto' width='100%'>";
+                        echo "</div>";
+                        echo "<div class='col-6'>";
+                        echo "{$_SESSION['producto']}";
+                        echo "<p>$ {$_SESSION['precio_por_producto']}</p>";
+                        echo "Marca " . $_SESSION['marca'];
+
+                        // Imprimir la cantidad con botones de aumentar y disminuir
+                        echo "<div class='input-group'>";
+                        echo "<span class='input-group-text'>Cantidad</span>";
+                        echo "<input type='text' class='form-control' id='quantity' value='{$_SESSION['cart_quantity']}' aria-describedby='basic-addon1' readonly>";
+                        echo "</div>";
+                        echo "<form method='post'>";
+                        echo "<button type='submit' name='eliminar_sesion' class='btn btn-outline-danger'>Eliminar artículo</button>";
+                        echo "</form>";
+
+                        echo "</div>";
+                        echo "<div class='col-3'>";
+                        echo "<strong>$ {$_SESSION['cart_price']}</strong>";
+                        echo "</div>";
+                        echo "</div>"; // Cierra la fila
+
+                        // Agregar el botón para eliminar la sesión
+
                     }
                     ?>
                 </div>
-
                 <div class="modal-footer">
                     <hr>
                     <br>
@@ -459,7 +492,7 @@ session_start();
                         }
                     </style>
                     <a href="../carrito.php" class="btn btn-secondary carrito_a">Ver mi Carrito</a>
-                    <a href="../pago.php" class="btn btn-primary carrito_a">Ir a finalizar compra</a>
+                    <button type="button" class="btn btn-primary">Ir a finalizar compra</button>
                 </div>
             </div>
         </div>
@@ -511,19 +544,36 @@ session_start();
 
     </script>
 
-    <script>
+<script>
         $(document).ready(function() {
             // Manejar el evento click del botón "Añadir al carrito"
             $("#addToCartBtn").click(function() {
+                // Realizar una solicitud AJAX para actualizar solo el precio total del carrito
+                $.ajax({
+                    url: "precio_carrito.php",
+                    type: "POST",
+                    data: {
+                        // Puedes enviar datos adicionales aquí si es necesario
+                    },
+                    success: function(response) {
+                        // Actualizar el contenido del elemento HTML que muestra el precio total del carrito
+                        $("#cartValue").html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        // Manejar errores si es necesario
+                        console.log(error);
+                    }
+                });
 
                 // Realizar una solicitud AJAX para actualizar el carrito y el precio total
+                // obtener la cantidad del producto
                 var quantity = $("#quantity").val();
 
                 $.ajax({
                     url: "actualizar_carrito.php",
                     type: "POST",
                     data: {
-                        quantity: quantity // enviar la cantidad del producto
+                        quantity: quantity
                     },
                     success: function(response) {
                         // Actualizar el contenido del modal con los datos actualizados del carrito
@@ -555,6 +605,17 @@ session_start();
         });
     </script>
 
+    <script>
+        $(document).ready(function() {
+            // Manejar el evento click del botón "Añadir al carrito"
+            $("#addToCartBtn").click(function() {
+                // Esperar 3 segundos antes de recargar la página
+                setTimeout(function() {
+                    location.reload();
+                }, 500); // 3000 milisegundos = 3 segundos
+            });
+        });
+    </script>
 
 </body>
 

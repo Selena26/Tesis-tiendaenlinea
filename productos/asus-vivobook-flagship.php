@@ -165,9 +165,9 @@ session_start();
                                 <?php
 
                                 // Definir el precio por producto
-                                $precio_por_producto = 1000; // Precio por cada producto
-                                $ruta_img = '../assets/img/3_productos/Asus_FN.png'; // Ruta de la imagen del producto
-                                $producto = 'Asus VivoBook'; // Nombre del producto
+                                $precio_por_producto = 699; // Precio por cada producto
+                                $ruta_img = '../assets/img/productos/Asus_FN-300x300.png'; // Ruta de la imagen del producto
+                                $producto = 'ASUS Vivobook Flagship'; // Nombre del producto
                                 $marca = 'Asus'; // Marca del producto
                                 // Guardar el precio, la ruta de la imagen y el nombre del producto en la sesión si no están definidos previamente
                                 if (!isset($_SESSION['precio_por_producto'])) {
@@ -275,17 +275,19 @@ session_start();
             <!-- la segunda columna general donde esta el boton de carrito y los productos recomendados -->
             <div class="col-3" style="border-left: 1px solid #ababab75;">
                 <!-- icono -->
+                <!-- Botón con PHP integrado -->
                 <button id="openModalBtn" type="button" class="btn btn-link">
                     <span id="cartValue">
                         <?php
                         // Verifica si $_SESSION['cart_price'] está establecido y asigna un valor predeterminado de 0 si no lo está
                         $cart_price = isset($_SESSION['cart_price']) ? $_SESSION['cart_price'] : 0;
-
+                        // Imprimir el precio total del carrito formateado como moneda
                         echo '$' . number_format($cart_price, 2);
                         ?>
                     </span>
                     <i class="bi bi-cart"></i>
                 </button>
+
 
 
 
@@ -468,7 +470,7 @@ session_start();
                         echo "<input type='text' class='form-control' id='quantity' value='{$_SESSION['cart_quantity']}' aria-describedby='basic-addon1' readonly>";
                         echo "</div>";
                         echo "<form method='post'>";
-                        echo "<button type='submit' name='eliminar_sesion' class='btn btn-outline-danger'>Eliminar Sesión</button>";
+                        echo "<button type='submit' name='eliminar_sesion' class='btn btn-outline-danger'>Eliminar artículo</button>";
                         echo "</form>";
 
                         echo "</div>";
@@ -622,8 +624,6 @@ session_start();
             });
         });
     </script>
-
-
 
 </body>
 

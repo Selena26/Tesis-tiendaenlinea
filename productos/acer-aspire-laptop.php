@@ -132,7 +132,6 @@ session_start();
                         </div> <!--row-->
                     </div>
 
-
                     <div class="col-md-6">
                         <!-- Product Summary -->
 
@@ -181,8 +180,6 @@ session_start();
                                     $_SESSION['marca'] = $marca;
                                 }
                                 ?>
-
-
                             </div>
                         </form>
 
@@ -268,23 +265,20 @@ session_start();
                     </div>
                 </div><!--row-->
             </div>
-            <div class="col-3 ">
-
-                <!-- Botón con PHP integrado -->
+            <!-- la segunda columna general donde esta el boton de carrito y los productos recomendados -->
+            <div class="col-3" style="border-left: 1px solid #ababab75;">
+                <!-- icono -->
                 <button id="openModalBtn" type="button" class="btn btn-link">
                     <span id="cartValue">
                         <?php
                         // Verifica si $_SESSION['cart_price'] está establecido y asigna un valor predeterminado de 0 si no lo está
                         $cart_price = isset($_SESSION['cart_price']) ? $_SESSION['cart_price'] : 0;
-
+                        // Imprimir el precio total del carrito formateado como moneda
                         echo '$' . number_format($cart_price, 2);
                         ?>
                     </span>
                     <i class="bi bi-cart"></i>
                 </button>
-
-
-
                 <script>
                     // Esperar a que el documento esté cargado
                     document.addEventListener("DOMContentLoaded", function() {
@@ -301,11 +295,6 @@ session_start();
                         });
                     });
                 </script>
-
-
-
-
-
 
                 <div class="card" style="width: 18rem; background-color: transparent; border: none">
                     <div class="card-body">
@@ -353,8 +342,6 @@ session_start();
         </div>
     </div>
 
-
-
     <!--FOOTER --->
     <section class="bg-dark text-light">
         <div class="container text-center text-md-start mt-5">
@@ -390,9 +377,7 @@ session_start();
                         }
                     </style>
                     <a href="terminos-y-condiciones.html">Términos y Condiciones</a> <br>
-
                     <a href="politica-de-privacidad.html">Política de Privacidad</a>
-
                 </div>
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                     <!-- Content -->
@@ -403,8 +388,6 @@ session_start();
                     <a href="" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-tiktok"></i></a>
                     <!-- icono de whatsapp-->
                     <a href="" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-whatsapp"></i></a>
-
-
                 </div>
                 <!-- Grid column -->
             </div>
@@ -414,8 +397,6 @@ session_start();
     <!-- Section: Links  -->
     <!-- Copyright -->
     </footer>
-
-
 
     <!-- Bootstrap Bundle with Popper -->
     <div class="modal right fade" id="exampleModalRight" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -464,7 +445,7 @@ session_start();
                         echo "<input type='text' class='form-control' id='quantity' value='{$_SESSION['cart_quantity']}' aria-describedby='basic-addon1' readonly>";
                         echo "</div>";
                         echo "<form method='post'>";
-                        echo "<button type='submit' name='eliminar_sesion' class='btn btn-outline-danger'>Eliminar Sesión</button>";
+                        echo "<button type='submit' name='eliminar_sesion' class='btn btn-outline-danger'>Eliminar artículo</button>";
                         echo "</form>";
 
                         echo "</div>";
@@ -478,12 +459,6 @@ session_start();
                     }
                     ?>
                 </div>
-
-
-
-
-
-
 
                 <div class="modal-footer">
                     <hr>
@@ -501,8 +476,6 @@ session_start();
     </div>
 
     </div>
-
-
     <!-- Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
